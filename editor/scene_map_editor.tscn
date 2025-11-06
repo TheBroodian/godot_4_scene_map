@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://duvc1y1odsa4x"]
+
+[ext_resource type="Script" uid="uid://dgdbcc7an2t4c" path="res://editor/scene_map_editor.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bxeip0vsjmpf3" path="res://scene_map.svg" id="2"]
+
+[sub_resource type="DPITexture" id="DPITexture_dw1i5"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
+"
+
+[node name="SceneMapEditor" type="VBoxContainer"]
+custom_minimum_size = Vector2(230, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -794.0
+script = ExtResource("1")
+
+[node name="Toolbar" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 2
+
+[node name="FloorLabel" type="Label" parent="Toolbar"]
+layout_mode = 2
+text = "Floor:"
+
+[node name="FloorBox" type="SpinBox" parent="Toolbar"]
+layout_mode = 2
+min_value = -32767.0
+max_value = 32767.0
+
+[node name="VSeparator" type="VSeparator" parent="Toolbar"]
+layout_mode = 2
+
+[node name="MenuButton" type="MenuButton" parent="Toolbar"]
+layout_mode = 2
+text = "Scene Map"
+icon = ExtResource("2")
+
+[node name="SearchBar" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Search" type="LineEdit" parent="SearchBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Filter Scenes"
+right_icon = SubResource("DPITexture_dw1i5")
+
+[node name="Thumbnail" type="Button" parent="SearchBar"]
+layout_mode = 2
+toggle_mode = true
+icon = SubResource("DPITexture_dw1i5")
+flat = true
+
+[node name="List" type="Button" parent="SearchBar"]
+layout_mode = 2
+toggle_mode = true
+icon = SubResource("DPITexture_dw1i5")
+flat = true
+
+[node name="Palette" type="ItemList" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+max_text_lines = 2
+max_columns = 0
+fixed_column_width = 64
+icon_mode = 0
+fixed_icon_size = Vector2i(64, 64)
+
+[node name="NoPaletteWarning" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Assign a ScenePalette to this SceneMap."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="value_changed" from="Toolbar/FloorBox" to="." method="_floor_changed"]
+[connection signal="text_changed" from="SearchBar/Search" to="." method="_search_text_changed"]
+[connection signal="pressed" from="SearchBar/Thumbnail" to="." method="_set_display_mode" binds= [0]]
+[connection signal="pressed" from="SearchBar/List" to="." method="_set_display_mode" binds= [1]]
+[connection signal="item_selected" from="Palette" to="." method="_item_selected"]
