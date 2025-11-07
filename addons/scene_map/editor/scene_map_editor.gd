@@ -70,7 +70,6 @@ func _exit_tree() -> void:
 
 
 func _ready() -> void:
-	#print("scene_map_editor, _ready called.")
 	thumbnail_button.icon = get_theme_icon("FileThumbnail", "EditorIcons");
 	list_button.icon = get_theme_icon("FileList", "EditorIcons");
 	search_box.right_icon = get_theme_icon("Search", "EditorIcons");

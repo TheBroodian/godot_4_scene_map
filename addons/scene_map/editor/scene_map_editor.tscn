@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://duvc1y1odsa4x"]
 
-[ext_resource type="Script" uid="uid://dgdbcc7an2t4c" path="res://editor/scene_map_editor.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://bxeip0vsjmpf3" path="res://scene_map.svg" id="2"]
+[ext_resource type="Script" uid="uid://dgdbcc7an2t4c" path="res://addons/scene_map/editor/scene_map_editor.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cs4r05ypnc48i" path="res://addons/scene_map/scene_map.svg" id="2"]
 
 [sub_resource type="DPITexture" id="DPITexture_dw1i5"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>

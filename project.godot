@@ -13,6 +13,10 @@ config_version=5
 config/name="scene_map"
 config/features=PackedStringArray("4.5")
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/scene_map/plugin.cfg")
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

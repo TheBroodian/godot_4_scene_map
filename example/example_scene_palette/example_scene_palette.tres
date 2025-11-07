@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ScenePalette" load_steps=5 format=3 uid="uid://cnuqy8ca0tqsg"]
+
+[ext_resource type="PackedScene" uid="uid://cl337jx0ur6a0" path="res://example/example_scene_palette/example_corner_scene.tscn" id="1_37dma"]
+[ext_resource type="Script" uid="uid://c18yyci7ax7vx" path="res://addons/scene_map/scene_palette.gd" id="1_m2a77"]
+[ext_resource type="PackedScene" uid="uid://do2grijeynp4a" path="res://example/example_scene_palette/example_wall_scene.tscn" id="2_kbysw"]
+[ext_resource type="PackedScene" uid="uid://ncuamu4dgyy8" path="res://example/example_scene_palette/example_floor_scene.tscn" id="3_vq84v"]
+
+[resource]
+resource_name = "ScenePalette"
+script = ExtResource("1_m2a77")
+items/0/name = "corner"
+items/0/scene = ExtResource("1_37dma")
+items/1/name = "wall"
+items/1/scene = ExtResource("2_kbysw")
+items/2/name = "floor"
+items/2/scene = ExtResource("3_vq84v")
+metadata/_custom_type_script = "uid://c18yyci7ax7vx"

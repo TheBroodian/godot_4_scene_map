@@ -1,0 +1,372 @@
+[gd_scene load_steps=6 format=3 uid="uid://8d5w36t8y7ee"]
+
+[ext_resource type="Script" uid="uid://bqeatnmriivcr" path="res://addons/scene_map/scene_map.gd" id="1_lp16v"]
+[ext_resource type="Resource" uid="uid://cnuqy8ca0tqsg" path="res://example/example_scene_palette/example_scene_palette.tres" id="2_lsukf"]
+[ext_resource type="PackedScene" uid="uid://cl337jx0ur6a0" path="res://example/example_scene_palette/example_corner_scene.tscn" id="3_76es0"]
+[ext_resource type="PackedScene" uid="uid://do2grijeynp4a" path="res://example/example_scene_palette/example_wall_scene.tscn" id="4_23apa"]
+[ext_resource type="PackedScene" uid="uid://ncuamu4dgyy8" path="res://example/example_scene_palette/example_floor_scene.tscn" id="5_c52mg"]
+
+[node name="example_scene" type="Node3D"]
+
+[node name="SceneMap" type="Node3D" parent="."]
+script = ExtResource("1_lp16v")
+palette = ExtResource("2_lsukf")
+cell_size = Vector3(1, 1, 1)
+cell_center_x = true
+cell_center_y = false
+cell_center_z = true
+cell_map = {
+Vector3(-2, 0, -3): {
+"itemId": 0,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("corner2")
+},
+Vector3(-2, 0, -2): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall3")
+},
+Vector3(-2, 0, -1): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall2")
+},
+Vector3(-2, 0, 0): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall")
+},
+Vector3(-2, 0, 1): {
+"itemId": 0,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("corner")
+},
+Vector3(-1, 0, -3): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall4")
+},
+Vector3(-1, 0, -2): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor8")
+},
+Vector3(-1, 0, -1): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor7")
+},
+Vector3(-1, 0, 0): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor15")
+},
+Vector3(-1, 0, 1): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall15")
+},
+Vector3(0, 0, -6): {
+"itemId": 0,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("corner8")
+},
+Vector3(0, 0, -5): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall17")
+},
+Vector3(0, 0, -4): {
+"itemId": 0,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("corner5")
+},
+Vector3(0, 0, -3): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall5")
+},
+Vector3(0, 0, -2): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor5")
+},
+Vector3(0, 0, -1): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor6")
+},
+Vector3(0, 0, 0): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor14")
+},
+Vector3(0, 0, 1): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall14")
+},
+Vector3(1, 0, -6): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall16")
+},
+Vector3(1, 0, -5): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor18")
+},
+Vector3(1, 0, -4): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor17")
+},
+Vector3(1, 0, -3): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor16")
+},
+Vector3(1, 0, -2): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor4")
+},
+Vector3(1, 0, -1): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor9")
+},
+Vector3(1, 0, 0): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor13")
+},
+Vector3(1, 0, 1): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall13")
+},
+Vector3(2, 0, -6): {
+"itemId": 0,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("corner7")
+},
+Vector3(2, 0, -5): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall18")
+},
+Vector3(2, 0, -4): {
+"itemId": 0,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("corner6")
+},
+Vector3(2, 0, -3): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall6")
+},
+Vector3(2, 0, -2): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor3")
+},
+Vector3(2, 0, -1): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor2")
+},
+Vector3(2, 0, 0): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor12")
+},
+Vector3(2, 0, 1): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall12")
+},
+Vector3(3, 0, -3): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall7")
+},
+Vector3(3, 0, -2): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor10")
+},
+Vector3(3, 0, -1): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor")
+},
+Vector3(3, 0, 0): {
+"itemId": 2,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("floor11")
+},
+Vector3(3, 0, 1): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall11")
+},
+Vector3(4, 0, -3): {
+"itemId": 0,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("corner3")
+},
+Vector3(4, 0, -2): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall8")
+},
+Vector3(4, 0, -1): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall9")
+},
+Vector3(4, 0, 0): {
+"itemId": 1,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("wall10")
+},
+Vector3(4, 0, 1): {
+"itemId": 0,
+"orientation": Quaternion(0, 0, 0, 1),
+"path": NodePath("corner4")
+}
+}
+metadata/_custom_type_script = "uid://bqeatnmriivcr"
+
+[node name="corner" parent="SceneMap" instance=ExtResource("3_76es0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1.5)
+
+[node name="wall" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0.5)
+
+[node name="wall2" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -0.5)
+
+[node name="wall3" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -1.5)
+
+[node name="corner2" parent="SceneMap" instance=ExtResource("3_76es0")]
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, -1.5, 0, -2.5)
+
+[node name="wall4" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, 0, -2.5)
+
+[node name="wall5" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0, -2.5)
+
+[node name="wall6" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5, 0, -2.5)
+
+[node name="wall7" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.5, 0, -2.5)
+
+[node name="corner3" parent="SceneMap" instance=ExtResource("3_76es0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.5, 0, -2.5)
+
+[node name="wall8" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.5, 0, -1.5)
+
+[node name="wall9" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.5, 0, -0.5)
+
+[node name="wall10" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.5, 0, 0.5)
+
+[node name="corner4" parent="SceneMap" instance=ExtResource("3_76es0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.5, 0, 1.5)
+
+[node name="wall11" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.5, 0, 1.5)
+
+[node name="wall12" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5, 0, 1.5)
+
+[node name="wall13" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, 1.5)
+
+[node name="wall14" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 0, 1.5)
+
+[node name="wall15" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1.5)
+
+[node name="floor" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -0.5)
+
+[node name="floor2" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -0.5)
+
+[node name="floor3" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -1.5)
+
+[node name="floor4" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -1.5)
+
+[node name="floor5" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -1.5)
+
+[node name="floor6" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.5)
+
+[node name="floor7" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
+
+[node name="floor8" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1.5)
+
+[node name="floor9" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -0.5)
+
+[node name="floor10" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -1.5)
+
+[node name="floor11" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0.5)
+
+[node name="floor12" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0.5)
+
+[node name="floor13" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0.5)
+
+[node name="floor14" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+
+[node name="floor15" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.5)
+
+[node name="floor16" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -2.5)
+
+[node name="floor17" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -3.5)
+
+[node name="corner5" parent="SceneMap" instance=ExtResource("3_76es0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -3.5)
+
+[node name="corner6" parent="SceneMap" instance=ExtResource("3_76es0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.5, 0, -3.5)
+
+[node name="floor18" parent="SceneMap" instance=ExtResource("5_c52mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -4.5)
+
+[node name="corner7" parent="SceneMap" instance=ExtResource("3_76es0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.5, 0, -5.5)
+
+[node name="corner8" parent="SceneMap" instance=ExtResource("3_76es0")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0.5, 0, -5.5)
+
+[node name="wall16" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -5.5)
+
+[node name="wall17" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -4.5)
+
+[node name="wall18" parent="SceneMap" instance=ExtResource("4_23apa")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.5, 0, -4.5)
